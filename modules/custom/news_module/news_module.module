@@ -1,0 +1,43 @@
+<?php
+/**
+ * Implementing hook_theme().
+ */
+function news_module_theme($existing, $type, $theme, $path) {
+
+  return array(
+    'news_list' => array(
+      'variables' => array('items' => array(), 'title' => '')
+    )
+  );
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function news_module_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'user_login_form' ) {
+    // Add placeholders.
+    $form['name']['#attributes']['placeholder'] = t('Username');
+    $form['pass']['#attributes']['placeholder'] = t('Password');
+    // Remove description text
+    unset($form['name']['#description']);	
+    unset($form['pass']['#description']);	
+  }
+
+if ($form_id == 'user_register_form') {
+unset($form['account']['mail']['#description']);
+unset($form['account']['name']['#description']);
+unset($form['account']['pass']['#description']);
+unset($form['account']['pass']['#description']);
+unset($form['contact']);
+unset($form['picture']);
+
+$form['select_roles'] = array(
+'#type' => 'radios',
+'#title' => t('Choose a role'),
+'#options' => array('publisher'=>t('publisher'), 'user'=> t('user')),
+'#required' => TRUE
+);
+}
+}
+

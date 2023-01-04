@@ -1,0 +1,7 @@
+news_module.listing:
+  path: "/news-listing"
+  defaults:
+    _controller: '\Drupal\news_module\Controller\NewsModuleController::view'
+    _title: "Our custom news list"
+  requirements:
+    _permission: "access content"

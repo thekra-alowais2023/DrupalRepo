@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="row user-header-logout">
+
+		<h4 class="title">
+			{{'Welcome Back :'|trans}}
+			<span>
+				{{ user.displayname }}
+			</span>
+		</h4>
+	</div>
+	<div class="logout">
+		<a href="{{ url('<front>') }}/user/logout">
+			<h5 class="title">
+				{{'Logout'|trans}}
+			</h5>
+		</a>
+	</div>
+
+</div>
+
+
+{{drupal_view('user_dashboard','block_1')}}
+{{drupal_view('user_dashboard','block_2')}}

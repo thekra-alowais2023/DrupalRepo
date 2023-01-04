@@ -1,0 +1,5 @@
+name: News Module
+description: Custom module for news
+core: 8.x
+type: module
+package: custom module

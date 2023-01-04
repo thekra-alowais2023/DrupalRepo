@@ -1,0 +1,21 @@
+<!-- Start Page section -->
+<div id="block-ourservices" class="block">
+
+	<div class="block-content">
+
+		<div class="field field--name-body field--type-text-with-summary field--label-hidden field-item">
+			<div
+				class="services">
+				<!-- start service block -->
+				{% for row in rows %}
+					<div class="service">
+						{{ row.content }}
+					</div>
+				{% endfor %}
+				<!-- end service block -->
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- End Page section -->

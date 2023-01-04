@@ -1,0 +1,23 @@
+<div id="block-ourservices" class="block">
+
+	<h2 class="block-title">Our Services</h2>
+
+	<div class="block-content">
+
+		<div class="field field--name-body field--type-text-with-summary field--label-hidden field-item">
+			<div class="services">
+				{% for news in items %}
+					<div class="service">
+						<div class="service-icon">
+							<i class="fa fa-coffee" aria-hidden="true"></i>
+						</div>
+						<h3>{{ news.name }}</h3>
+						<a class="button-link" href="#">read more</a>
+					</div>
+				{% endfor %}
+
+
+			</div><!-- .services --></div>
+
+	</div>
+</div>
